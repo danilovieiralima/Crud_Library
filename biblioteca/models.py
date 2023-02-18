@@ -1,7 +1,7 @@
 from django.db import models
 
 class Livros(models.Model):
-    isbn = models.CharField(max_length=13)
+    isbn = models.CharField(max_length=13, unique=True)
     autor = models.CharField(max_length=30)
     titulo = models.CharField(max_length=100)
     descricao = models.TextField()
